@@ -39,8 +39,8 @@ rl.question("How many characters do you want for your password?\n> ", untrustedP
             console.log('Too many characters. Limit : 100');
             process.exit(0)
         }
-        if (passwordsCount > 1_000_000) {
-            console.log('Too many passwords. Limit : 1000000');
+        if (passwordsCount > 10_000) {
+            console.log('Too many passwords. Limit : 10000');
             process.exit(0)
         }
 
