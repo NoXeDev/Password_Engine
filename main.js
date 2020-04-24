@@ -14,6 +14,9 @@ var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
 var numbers = '0123456789'.split('')
 var chars = "£$%ù*µ!§:/;.,?&é'(-è_çà".split('')
 
+var static_lengthc
+var static_lengthn
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -28,8 +31,8 @@ const rl = readline.createInterface({
 rl.question("Characters lengths ? \n> ", function(lengthc){
     rl.question("How many password would you generate ? \n> ", function(lengthn){
         if(isNaN(lengthc) || isNaN(lengthn)){console.log("Sorry, this is not a number"); process.exit(0)}
-        var static_lengthc = Number(lengthc)
-        var static_lengthn = Number(lengthn)
+        static_lengthc = Number(lengthc)
+        static_lengthn = Number(lengthn)
         if(static_lengthc > 100){console.log('Too many characters. Limit : 100'); process.exit(0)}
         if(static_lengthn > 10000000){console.log('Too many password. Limit : 10000000'); process.exit(0)}
         rl.close()
