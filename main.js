@@ -34,7 +34,7 @@ rl.question("Characters lengths ? \n> ", function(lengthc){
         static_lengthc = Number(lengthc)
         static_lengthn = Number(lengthn)
         if(static_lengthc > 100){console.log('Too many characters. Limit : 100'); process.exit(0)}
-        if(static_lengthn > 10000000){console.log('Too many password. Limit : 10000000'); process.exit(0)}
+        if(static_lengthn > 10000){console.log('Too many password. Limit : 10000'); process.exit(0)}
         rl.close()
     })
 })
