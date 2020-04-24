@@ -11,6 +11,7 @@ const loadingBar = new cliProgress.SingleBar({
 const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
 const numbers = '0123456789'.split('')
 const chars = "£$%ù*µ!§:/;.,?&é'(-è_çà".split('')
+const capitals = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
 function getRandomInt(min, max) {
     min = Math.ceil(min)
@@ -53,7 +54,7 @@ rl.on('close', () => {
     for (let i = 0 ; i < passwordsCount ; i++) {
         let password = ""
         for (let j = 0 ; j < passwordLength ; j++) {
-            let type = getRandomInt(0,3)
+            let type = getRandomInt(0,4)
             if (type == 0) { 
                 password += alphabet[getRandomInt(0, alphabet.length)]
             }
@@ -62,6 +63,9 @@ rl.on('close', () => {
             }
             else if (type == 2) {
                 password += chars[getRandomInt(0, chars.length)]
+            }
+            else if (type == 3) {
+                password += capitals[getRandomInt(0, capitals.length)]
             }
         }
         passwords += `${password}\n`
