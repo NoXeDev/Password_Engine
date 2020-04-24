@@ -1,10 +1,10 @@
 # Password_Engine
-A simple code for generate password
+A simple code to generate passwords.
 
-run this command in you're project directory for installing all dependencies :
+Run this command in your project directory to install all the dependencies :
 
 ```
 npm install
 ```
 
-run ```launch.bat``` on windows for launch the code
+You can run ```launch.bat```, on Windows, as a shortcut to launch the program.
