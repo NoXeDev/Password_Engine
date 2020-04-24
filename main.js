@@ -11,7 +11,7 @@ const loadingBar = new cliProgress.SingleBar({
 const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
 const numbers = '0123456789'.split('')
 const chars = "£$%ù*µ!§:/;.,?&é'(-è_çà".split('')
-const capitals = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+const capitals = alphabet.map(letter => {return letter.toUpperCase()})
 
 function getRandomInt(min, max) {
     min = Math.ceil(min)
