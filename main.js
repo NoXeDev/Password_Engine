@@ -43,7 +43,6 @@ rl.question("How many characters do you want for your password?\n> ", untrustedP
             console.log('Too many passwords. Limit : 10000');
             process.exit(0)
         }
-
         rl.close()
     })
 })
